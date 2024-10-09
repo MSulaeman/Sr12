@@ -10,11 +10,12 @@
 
 <body>
     <!-- NAVBAR -->
-    <div class="navbar bg-base-100 rounded-lg bg-teal-400 ">
+    <div class="navbar bg-base-100  bg-teal-400 ">
         <div class="flex-1 text-white text">
-            <p class="text-2xl">SR12<span class="text-lg">Lite</span></p>
+            <p class="text-3xl">SR12<span class="text-lg">Lite</span></p>
         </div>
         <div class="flex-none">
+            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                     <div class="indicator">
@@ -37,17 +38,16 @@
             </div>
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                    <div class="w-10 rounded-full">
-                        <img alt="Tailwind CSS Navbar component"
-                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div class="avatar placeholder">
+                        <div class="bg-neutral text-neutral-content w-8 rounded-full">
+                            <span class="text-xs">UI</span>
+                        </div>
                     </div>
                 </div>
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                     <li>
-                        <a class="justify-between">
-                            Profile
-                        </a>
+                        <a class="justify-between">Profile</a>
                     </li>
                     <li><a>Settings</a></li>
                     <li><a href="login.php">Logout</a></li>
@@ -55,14 +55,64 @@
             </div>
         </div>
     </div>
+    <!-- NAVBAR END -->
 
-    <section class="bg-white py-20">
-        <div class="card card-compact bg-base-100 w-96 shadow-xl">
+
+    <section class="bg-white py-20 flex flex-wrap gap-3">
+        <div class="card card-compact bg-base-100 w-64 shadow-xl">
             <figure>
                 <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
             </figure>
             <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
+                <h2 class="card-title">Nike 102</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-64 shadow-xl">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-64 shadow-xl">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-64 shadow-xl">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-64 shadow-xl">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-primary">Buy Now</button>
@@ -72,16 +122,12 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="bg-gray-200 py-20 flex">
+    <section class="bg-current py-20 flex">
         <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
-            <button class="bg-green-500  text-white font-bold py-2 px-4 rounded"><a href="daftar.php">Sign
-                    Up</a></button>
-        </div>
-        <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
-            <button class="bg-red-600  text-white font-bold py-2 px-4 rounded"><a href="login.php">Logout</a></button>
-        </div>
 
+        </div>
     </section>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
