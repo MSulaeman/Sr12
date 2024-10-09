@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];  // Simpan password tanpa hashing
 
     // Cek apakah username sudah ada
-    $sql = "SELECT id FROM login WHERE username = ?";
+    $sql = "SELECT id FROM user WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $username);
     $stmt->execute();
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Username sudah ada, pilih username lain.";
     } else {
         // Insert data user baru tanpa hashing password
-        $sql = "INSERT INTO login (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO user (username, password) VALUES (?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('ss', $username, $password);
 
@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="relative">

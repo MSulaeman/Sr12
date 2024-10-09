@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -39,7 +39,6 @@
         </div>
         <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
             <button class="bg-red-600  text-white font-bold py-2 px-4 rounded"><a href="login.php">Logout</a></button>
-            <i class="fas fa-user">Logout</i>
         </div>
         
     </section>
