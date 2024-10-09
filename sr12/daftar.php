@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <html>
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Daftar Akun</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -61,6 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

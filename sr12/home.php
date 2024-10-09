@@ -10,26 +10,20 @@
 
     <!-- Features Section -->
     <section class="bg-white py-20">
-        <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
-            <h2 class="text-3xl font-bold">Features</h2>
-            <ul class="flex flex-wrap justify-center">
-                <li class="w-full md:w-1/2 lg:w-1/3 p-4">
-                    <i class="fas fa-lock text-4xl text-gray-600"></i>
-                    <h3 class="text-xl font-bold">Secure</h3>
-                    <p class="text-gray-600">Our landing page is secure and protected.</p>
-                </li>
-                <li class="w-full md:w-1/2 lg:w-1/3 p-4">
-                    <i class="fas fa-rocket text-4xl text-gray-600"></i>
-                    <h3 class="text-xl font-bold">Fast</h3>
-                    <p class="text-gray-600">Our landing page is fast and optimized.</p>
-                </li>
-                <li class="w-full md:w-1/2 lg:w-1/3 p-4">
-                    <i class="fas fa-mobile text-4xl text-gray-600"></i>
-                    <h3 class="text-xl font-bold">Responsive</h3>
-                    <p class="text-gray-600">Our landing page is responsive and works on all devices.</p>
-                </li>
-            </ul>
+    <div class="card card-compact bg-base-100 w-96 shadow-xl">
+        <figure>
+            <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">Shoes!</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
         </div>
+    </div>
     </section>
 
     <!-- Call to Action Section -->
@@ -42,5 +36,6 @@
         </div>
         
     </section>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
