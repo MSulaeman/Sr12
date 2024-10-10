@@ -8,11 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body style="height: auto;">
     <!-- NAVBAR -->
-    <div class="navbar bg-base-100  bg-teal-400 ">
-        <div class="flex-1 text-white text">
-            <p class="text-3xl">SR12<span class="text-lg">Lite</span></p>
+    <nav class="navbar bg-base-100  bg-transparent ">
+        <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
+            <p class="text-3xl my-auto">SR12<span class="text-lg">Lite</span></p>
         </div>
         <div class="flex-none">
             <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
@@ -26,7 +26,7 @@
                         </svg>
                     </div>
                 </div>
-                <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+                <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-60 shadow">
                     <div class="card-body">
                         <span class="text-lg font-bold">8 Items</span>
                         <span class="text-info">Subtotal: $999</span>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow">
                     <li>
                         <a class="justify-between">Profile</a>
                     </li>
@@ -54,79 +54,93 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
     <!-- NAVBAR END -->
 
+    <!-- CARD -->
+    <div class=" mx-2 my-auto py-20 gap-1 flex flex-wrap ">
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CARD END-->
 
-    <section class="bg-white py-20 flex flex-wrap gap-3">
-        <div class="card card-compact bg-base-100 w-64 shadow-xl">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-64 shadow-xl">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-64 shadow-xl">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-64 shadow-xl">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-64 shadow-xl">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Call to Action Section -->
-    <section class="bg-current py-20 flex">
-        <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
-
+    <div class="container mx-auto">
+        <div class="carousel w-full">
+            <div id="item1" class="carousel-item w-full">
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                    class="w-full" />
+            </div>
+            <div id="item2" class="carousel-item w-full">
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                    class="w-full" />
+            </div>
+            <div id="item3" class="carousel-item w-full">
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                    class="w-full" />
+            </div>
+            <div id="item4" class="carousel-item w-full">
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                    class="w-full" />
+            </div>
         </div>
-    </section>
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#item1" class="btn btn-xs">1</a>
+            <a href="#item2" class="btn btn-xs">2</a>
+            <a href="#item3" class="btn btn-xs">3</a>
+            <a href="#item4" class="btn btn-xs">4</a>
+        </div>
+    </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
