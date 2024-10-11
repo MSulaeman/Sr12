@@ -10,11 +10,51 @@
 
 <body class="h-96">
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent ">
-        <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
-            <p class="text-3xl my-auto">SR12<span class="text-lg">Lite</span></p>
+    <nav class="navbar bg-base-100 bg-transparent">
+        <div class="navbar-start">
+            <!-- Dropdown for mobile -->
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a>Home</a></li>
+                    <li>
+                        <a>Kategori</a>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a>About</a></li>
+                </ul>
+            </div>
+            <!-- Logo -->
+            <a class="btn btn-ghost text-xl">SR12lite</a>
         </div>
-        <div class="flex-none">
+
+        <div class="navbar-center hidden lg:flex">
+            <!-- Menu for desktop -->
+            <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li>
+                    <details>
+                        <summary>Kategori</summary>
+                        <ul class="p-2">
+                            <li><a>Submenu 1</a></li>
+                            <li><a>Submenu 2</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a>about</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-end flex-none">
             <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
             <div class="dropdown dropdown-end">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -31,7 +71,7 @@
                         <span class="text-lg font-bold">0 Items</span>
                         <span class="text-info">Subtotal: $0</span>
                         <div class="">
-                            <a href="keranjang.php" class="btn bg-teal-400 text-white hover:bg-teal-600" >
+                            <a href="keranjang.php" class="btn bg-teal-400 text-white hover:bg-teal-600">
                                 <button type="submit">View Cart</button>
                             </a>
                         </div>
@@ -46,8 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow">
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow">
                     <li>
                         <a class="justify-between">Profile</a>
                     </li>
@@ -59,8 +98,8 @@
     </nav>
     <!-- NAVBAR END -->
 
-    <!-- CARD -->
-    <div class=" mx-2 my-auto py-20 gap-1 flex flex-wrap ">
+    <!-- CARD SECTION-->
+    <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap">
         <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
             <figure>
                 <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
@@ -73,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
             <figure>
                 <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
             </figure>
@@ -85,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
             <figure>
                 <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
             </figure>
@@ -97,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105">
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
             <figure>
                 <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
             </figure>
@@ -109,20 +148,22 @@
                 </div>
             </div>
         </div>
+        <!-- Add other card items similarly... -->
     </div>
-    <!-- CARD END-->
+    <!-- CARD END -->
 
-
+    <!-- HERO SECTION -->
     <div class="container mx-auto">
-        <div class="hero bg-base-200 ">
+        <div class="hero bg-base-200">
             <div class="hero-content flex-col lg:flex-row">
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
                     class="max-w-sm rounded-lg shadow-2xl" />
                 <div>
                     <h1 class="text-5xl font-bold">Spiderman!</h1>
                     <p class="py-6">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum soluta aliquid adipisci nam neque, voluptatem nemo esse eligendi omnis id et recusandae labore quis vitae! Molestias ipsa id laborum odit.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum soluta aliquid adipisci nam
+                        neque, voluptatem nemo esse eligendi omnis id et recusandae labore quis vitae! Molestias ipsa id
+                        laborum odit.
                     </p>
                     <button class="btn bg-teal-400 hover:bg-teal-600 text-white">Get Started</button>
                 </div>
