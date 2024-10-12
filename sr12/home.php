@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="h-96">
+<body>
     <!-- NAVBAR -->
     <nav class="navbar bg-base-100  bg-transparent ">
         <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
