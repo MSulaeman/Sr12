@@ -10,11 +10,9 @@
 
 <body>
     <!-- NAVBAR -->
-    <<<<<<< HEAD
+    
         <nav class="navbar bg-base-100 bg-transparent shadow-md">
-        =======
         <nav class="navbar bg-base-100 bg-transparent">
-            >>>>>>> 2dbfe7309ae9f07b3bbd8370d74248ca3704dc81
             <div class="navbar-start">
                 <!-- Dropdown for mobile -->
                 <div class="dropdown">
@@ -26,11 +24,9 @@
                         </svg>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <<<<<<< HEAD
+                        
                             <li><a href="home.php">Home</a></li>
-                            =======
                             <li><a>Home</a></li>
-                            >>>>>>> 2dbfe7309ae9f07b3bbd8370d74248ca3704dc81
                             <li>
                                 <a>Kategori</a>
                                 <ul class="p-2">
@@ -51,11 +47,10 @@
 
                 <!-- Menu for desktop -->
                 <ul class="menu menu-horizontal px-1">
-                    <<<<<<< HEAD
+                    
                         <li><a href="home.php">Home</a></li>
-                        =======
+                        
                         <li><a>Home</a></li>
-                        >>>>>>> 2dbfe7309ae9f07b3bbd8370d74248ca3704dc81
                         <li>
                             <details>
                                 <summary>Kategori</summary>
