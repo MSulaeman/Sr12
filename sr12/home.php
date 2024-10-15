@@ -12,7 +12,6 @@
     <!-- NAVBAR -->
     
         <nav class="navbar bg-base-100 bg-transparent shadow-md">
-        <nav class="navbar bg-base-100 bg-transparent">
             <div class="navbar-start">
                 <!-- Dropdown for mobile -->
                 <div class="dropdown">
@@ -26,7 +25,6 @@
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         
                             <li><a href="home.php">Home</a></li>
-                            <li><a>Home</a></li>
                             <li>
                                 <a>Kategori</a>
                                 <ul class="p-2">
@@ -43,14 +41,9 @@
             </div>
 
             <div class="navbar-center hidden lg:flex z-10   ">
-
-
                 <!-- Menu for desktop -->
                 <ul class="menu menu-horizontal px-1">
-                    
                         <li><a href="home.php">Home</a></li>
-                        
-                        <li><a>Home</a></li>
                         <li>
                             <details>
                                 <summary>Kategori</summary>
@@ -60,15 +53,11 @@
                                 </ul>
                             </details>
                         </li>
-
                         <li><a>About</a></li>
-
-
                 </ul>
             </div>
 
             <div class="navbar-end flex-none">
-
                 <label class="input input-bordered flex items-center gap-2">
                     <input type="text" class="grow" placeholder="Search" />
                     <svg
