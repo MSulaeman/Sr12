@@ -40,12 +40,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <html>
+
 <head>
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="relative">
+
+<body class="bg-gray-100  ">
+    <!-- NAVBAR -->
+    <nav class="navbar bg-base-100  bg-transparent">
+        <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
+            <p class="text-4xl mx-auto">SR12<span class="text-xl">Lite</span></p>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+<div class="flex items-center justify-center ">
+    <div class="relative mt-20 mx-auto">
         <div class="absolute inset-0 bg-teal-400 rounded-lg transform rotate-6"></div>
         <div class="relative bg-white rounded-lg shadow-lg p-8 w-80">
             <h2 class="text-2xl font-bold mb-6">Login</h2>
@@ -60,16 +71,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="flex items-center justify-center">
                     <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                            Login
+                        Login
                     </button>
                 </div>
                 <div>
                     <a class="flex items-center justify-center font-serif text-cyan-500" href="daftar.php">Don't have account?Sign Up</a>
                 </div>
             </form>
-            
+
         </div>
     </div>
+</div>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
+
 </html>
