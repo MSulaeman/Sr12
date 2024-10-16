@@ -10,7 +10,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100 bg-transparent">
+    <nav class="navbar bg-base-100 bg-transparent shadow-md">
         <div class="navbar-start">
             <!-- Dropdown for mobile -->
             <div class="dropdown">
@@ -119,81 +119,119 @@
     </nav>
     <!-- NAVBAR END -->
 
+    <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+            <img
+                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide4" class="btn btn-circle">❮</a>
+                <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+            <img
+                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" class="btn btn-circle">❮</a>
+                <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+            <img
+                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" class="btn btn-circle">❮</a>
+                <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+            <img
+                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" class="btn btn-circle">❮</a>
+                <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+        </div>
+    </div>
+
     <!-- CARD SECTION-->
-
-        <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap ">
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Add other card items similarly... -->
-        </div>
-        <!-- CARD END -->
-
-        <!-- HERO SECTION -->
-        <div class="container mx-auto">
-            <div class="hero bg-base-200">
-                <div class="hero-content flex-col lg:flex-row">
-                    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                        class="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 class="text-5xl font-bold">Spiderman!</h1>
-                        <p class="py-6">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum soluta aliquid adipisci nam
-                            neque, voluptatem nemo esse eligendi omnis id et recusandae labore quis vitae! Molestias ipsa id
-                            laborum odit.
-                        </p>
-                        <button class="btn bg-teal-400 hover:bg-teal-600 text-white">Get Started</button>
-                    </div>
+    <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap ">
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
                 </div>
             </div>
         </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+            <figure>
+                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">Nike 102</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add other card items similarly... -->
+    </div>
+    <!-- CARD END -->
 
-        <script src="https://cdn.tailwindcss.com"></script>
+    <!-- HERO SECTION -->
+    <div class="container mx-auto">
+        <div class="hero bg-base-200">
+            <div class="hero-content flex-col lg:flex-row">
+                <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                <div>
+                    <h1 class="text-5xl font-bold">Spiderman!</h1>
+                    <p class="py-6">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum soluta aliquid adipisci nam
+                        neque, voluptatem nemo esse eligendi omnis id et recusandae labore quis vitae! Molestias ipsa id
+                        laborum odit.
+                    </p>
+                    <button class="btn bg-teal-400 hover:bg-teal-600 text-white">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>

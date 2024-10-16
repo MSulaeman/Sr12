@@ -3,7 +3,8 @@ include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];  // Simpan password tanpa hashing
+    $password = $_POST['password']; 
+    
 
     // Cek apakah username sudah ada
     $sql = "SELECT id FROM user WHERE username = ?";
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-gray-100 ">
 
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent">
+    <nav class="navbar bg-base-100  bg-transparent shadow-md">
         <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
             <p class="text-4xl mx-auto">SR12<span class="text-xl">Lite</span></p>
         </div>

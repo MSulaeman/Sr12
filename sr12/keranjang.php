@@ -12,7 +12,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent ">
+    <nav class="navbar bg-base-100  bg-transparent shadow-md">
         <a href="home.php">
         <span class="material-symbols-outlined">
             arrow_back
