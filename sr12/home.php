@@ -35,46 +35,40 @@
             </div>
             <!-- Logo -->
 
-            <div class="text-4xl text-teal-500 font-mono italic">SR12<span class="text-lg">Lite</span></div>
-        </div>
+                <div class="text-4xl text-teal-500 font-mono italic">SR12<span class="text-lg">Lite</span></div>
+            </div>
 
-        <div class="navbar-center hidden lg:flex z-10   ">
+            <div class="navbar-center hidden lg:flex z-10   ">
+                <!-- Menu for desktop -->
+                <ul class="menu menu-horizontal px-1">
+                        <li><a href="home.php">Home</a></li>
+                        <li>
+                            <details>
+                                <summary>Kategori</summary>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a>About</a></li>
+                </ul>
+            </div>
 
-
-            <!-- Menu for desktop -->
-            <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li>
-                    <details>
-                        <summary>Kategori</summary>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </details>
-                </li>
-
-                <li><a>About</a></li>
-
-
-            </ul>
-        </div>
-
-        <div class="navbar-end flex-none">
-
-            <label class="input input-bordered flex items-center gap-2">
-                <input type="text" class="grow" placeholder="Search" />
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="h-4 w-4 opacity-70">
-                    <path
-                        fill-rule="evenodd"
-                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                        clip-rule="evenodd" />
-                </svg>
-            </label>
+            <div class="navbar-end flex-none">
+                <label class="input input-bordered flex items-center gap-2">
+                    <input type="text" class="grow" placeholder="Search" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                        class="h-4 w-4 opacity-70">
+                        <path
+                            fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </label>
 
 
             <div class="dropdown dropdown-end">
@@ -119,98 +113,60 @@
     </nav>
     <!-- NAVBAR END -->
 
-    <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
-            <img
-                src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-                class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide4" class="btn btn-circle">❮</a>
-                <a href="#slide2" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide2" class="carousel-item relative w-full">
-            <img
-                src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-                class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide1" class="btn btn-circle">❮</a>
-                <a href="#slide3" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide3" class="carousel-item relative w-full">
-            <img
-                src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-                class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide2" class="btn btn-circle">❮</a>
-                <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-        <div id="slide4" class="carousel-item relative w-full">
-            <img
-                src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-                class="w-full" />
-            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href="#slide3" class="btn btn-circle">❮</a>
-                <a href="#slide1" class="btn btn-circle">❯</a>
-            </div>
-        </div>
-    </div>
-
     <!-- CARD SECTION-->
-    <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap ">
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+
+        <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap ">
+            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Nike 102</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Nike 102</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Nike 102</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">Nike 102</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Nike 102</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
+                    </div>
                 </div>
             </div>
+            <!-- Add other card items similarly... -->
         </div>
-        <!-- Add other card items similarly... -->
-    </div>
-    <!-- CARD END -->
+        <!-- CARD END -->
 
     <!-- HERO SECTION -->
     <div class="container mx-auto">
