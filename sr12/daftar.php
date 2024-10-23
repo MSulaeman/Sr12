@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-gray-100 ">
 
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent">
+    <nav class="navbar bg-base-100  bg-transparent shadow-md">
         <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
             <p class="text-4xl mx-auto">SR12<span class="text-xl">Lite</span></p>
         </div>
