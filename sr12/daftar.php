@@ -3,7 +3,10 @@ include 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];  // Simpan password tanpa hashing
+    $password = $_POST['password'];  // Ambil password dari input
+
+    // Hash password sebelum disimpan
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Cek apakah username sudah ada
     $sql = "SELECT id FROM user WHERE username = ?";
@@ -15,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->num_rows > 0) {
         echo "Username sudah ada, pilih username lain.";
     } else {
-        // Insert data user baru tanpa hashing password
+        // Insert data user baru dengan password yang sudah di-hash
         $sql = "INSERT INTO user (username, password) VALUES (?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ss', $username, $password);
+        $stmt->bind_param('ss', $username, $hashed_password);
 
         if ($stmt->execute()) {
             header('location:login.php');
@@ -32,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conn->close();
 }
 ?>
+
 
 
 <html>
