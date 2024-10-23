@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // mengecek apakah ada data login
 if (isset($_POST['login'])) {
 
@@ -8,6 +8,7 @@ if (isset($_POST['login'])) {
     // mendapatkan data
     $username = $_POST['username'];
     $password = $_POST['password'];
+    
 
     // Ambil data user berdasarkan username
     $query = mysqli_query($conn, "SELECT * FROM user where username='$username'");
@@ -19,7 +20,16 @@ if (isset($_POST['login'])) {
         $data = mysqli_fetch_array($query);
 
         if (password_verify($password,$data['password'])) {
-            header('Location: home.php');
+            // Simpan informasi ke session
+            $_SESSION['id'] = $data['id'];
+            $_SESSION['username'] = $data['username'];
+            $_SESSION['role'] = $data['role']; // Menyimpan role pengguna
+
+            if ($data['role'] === 'admin') {//verifikasi admin atau user
+                header('Location: Admin/admin.php');
+            }else{
+                header('Location: home.php');
+            }
         } else {
             header('Location: login.php?eror=username atau password salah');
         }
@@ -38,29 +48,27 @@ if (isset($_POST['login'])) {
 
 
 <html>
-
 <head>
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
+
 <?php
-if (isset($_GET['eror'])){
-    echo $_GET['eror'];
-}
-
-
+    if (isset($_GET['eror'])){
+        echo $_GET['eror'];
+    }
 ?>
-<body class="bg-gray-100  ">
+<body class="bg-gray-100 ">
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent shadow-md">
+    <!-- <nav class="navbar bg-base-100  bg-transparent shadow-md">
         <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
             <p class="text-4xl mx-auto">SR12<span class="text-xl">Lite</span></p>
         </div>
-    </nav>
+    </nav> -->
     <!-- NAVBAR END -->
 
     <div class="flex items-center justify-center ">
-        <div class="relative mt-20 mx-auto">
+        <div class="relative mt-28 mx-auto">
             <div class="absolute inset-0 bg-teal-400 rounded-lg transform rotate-6"></div>
             <div class="relative bg-white rounded-lg shadow-lg p-8 w-80">
                 <h2 class="text-2xl font-bold mb-6">Login</h2>
