@@ -41,7 +41,7 @@
     <div class="flex mt-6">
         <div class="w-96 border-2 border-teal-400 mx-auto rounded-lg">
             <table class="mx-auto">
-                <tr>
+                <tr class="bg-slate-300">
                     <th class="p-3">No</th>
                     <th class="p-3">Judul</th>
                     <th class="p-3">Qty</th>
@@ -61,8 +61,8 @@
                     <td class="p-3"><?=$produk['qty']?></td>
                     <td class="p-3"><?=$produk['harga']?></td>
                     <td >
-                        <a href=""class="p-3"><button class="btn-xs btn btn-outline btn-warning">Update</button></a>
-                        <a href="" class="p-3"><button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
+                        <a href="edit_produk.php?id=<?= $produk['id']?>" class="p-3"><button class="btn-xs btn btn-outline btn-warning">Update</button></a>
+                        <a href="hapus.php?nama=<?= $produk['nama']?>" class="p-3"><button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
                     </td>
                 </tr>
                 <?php } ?>

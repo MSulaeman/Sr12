@@ -25,5 +25,7 @@
             <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md">Kirim</button>
         </form>
     </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
