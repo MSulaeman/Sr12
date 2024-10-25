@@ -25,7 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -39,7 +39,7 @@
     <!-- NAVBAR END -->
 
     <div class="flex mt-6">
-        <div class="w-96 border-2 border-teal-400 mx-auto rounded-lg">
+        <div class="w-auto border-2 border-teal-400 mx-auto rounded-lg">
             <table class="mx-auto">
                 <tr class="bg-slate-300">
                     <th class="p-3">No</th>
