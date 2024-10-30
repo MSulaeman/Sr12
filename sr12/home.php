@@ -41,7 +41,7 @@
 
             <div class="navbar-center hidden lg:flex z-10   ">
                 <!-- Menu for desktop -->
-                <ul class="menu menu-horizontal px-1 text-white">
+                <ul class="menu menu-horizontal px-1 text-white text-base">
                         <li><a href="home.php">Home</a></li>
                         <li>
                             <details >
