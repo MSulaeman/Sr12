@@ -35,6 +35,9 @@
         <div class="flex-1 ">
             <p class="text-4xl text-teal-400  italic font-bold mx-auto">Halaman Admin</p>
         </div>
+        </div>
+        <a href="../home.php"><button class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded">Home</button></a>
+        </div>
     </nav>
     <!-- NAVBAR END -->
 
@@ -43,7 +46,7 @@
             <table class="mx-auto">
                 <tr class="bg-slate-300">
                     <th class="p-3">No</th>
-                    <th class="p-3">Judul</th>
+                    <th class="p-3">Nama</th>
                     <th class="p-3">Qty</th>
                     <th class="p-3">Harga</th>
                     <th class="p-3">Setting</th>

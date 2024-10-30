@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body>
+<body class="scroll-smooth">
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100 bg-transparent shadow-md">
+    <nav class="navbar bg-base-100 bg-teal-500 shadow-md">
         <div class="navbar-start">
             <!-- Dropdown for mobile -->
             <div class="dropdown">
@@ -35,17 +36,17 @@
             </div>
             <!-- Logo -->
 
-                <div class="text-4xl text-teal-500 font-mono italic">SR12<span class="text-lg">Lite</span></div>
+                <div class="text-4xl text-white font-mono italic">SR12<span class="text-lg">Lite</span></div>
             </div>
 
             <div class="navbar-center hidden lg:flex z-10   ">
                 <!-- Menu for desktop -->
-                <ul class="menu menu-horizontal px-1">
+                <ul class="menu menu-horizontal px-1 text-white">
                         <li><a href="home.php">Home</a></li>
                         <li>
-                            <details>
+                            <details >
                                 <summary>Kategori</summary>
-                                <ul class="p-2">
+                                <ul class="p-2 text-black">
                                     <li><a>Submenu 1</a></li>
                                     <li><a>Submenu 2</a></li>
                                 </ul>
@@ -185,6 +186,72 @@
             </div>
         </div>
     </div>
+
+    <!-- <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+            <h1 class="text-xl font-bold font-mono italic">SR<span class="text-lg">Lite</span></h1>
+        </div>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-400">Home</a>
+            <a href="#" class="hover:text-gray-400">Tentang</a>
+            <a href="#" class="hover:text-gray-400">Layanan</a>
+            <a href="#" class="hover:text-gray-400">Kontak</a>
+        </div>
+    </div>
+    
+</footer> -->
+
+<footer class="bg-black text-gray-400 mt-4">
+        <div class="container mx-auto py-8 px-4">
+            <div class="flex justify-between items-start mb-8">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-bold">SR12<span>Lite</span></h2>
+                        <p>We growing up your business with personal AI manager.</p>
+                    </div>
+                </div>
+                <div class="flex space-x-16">
+                    <div>
+                        <h3 class="text-white font-bold">Company</h3>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Blog</a></li>
+                            <li><a href="#" class="hover:underline">Careers</a></li>
+                            <li><a href="#" class="hover:underline">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold ">Resources</h3>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Documentation</a></li>
+                            <li><a href="#" class="hover:underline">Papers</a></li>
+                            <li><a href="#" class="hover:underline">Press Conferences</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold">Legal</h3>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:underline">Cookies Policy</a></li>
+                            <li><a href="#" class="hover:underline">Data Processing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-4 flex justify-between items-center">
+                <p>© 2024 SR12Lite Inc. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
