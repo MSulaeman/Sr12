@@ -11,7 +11,7 @@
 
 <body class="scroll-smooth">
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100 bg-teal-500 shadow-md">
+    <nav class="navbar h-4 bg-teal-500 shadow-md">
         <div class="navbar-start">
             <!-- Dropdown for mobile -->
             <div class="dropdown">
@@ -57,17 +57,14 @@
             </div>
 
             <div class="navbar-end flex-none">
-                <label class="input input-bordered flex items-center gap-2">
+                <label class="input input-bordered flex items-center gap-2 h-8">
                     <input type="text" class="grow" placeholder="Search" />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 16 16"
                         fill="currentColor"
                         class="h-4 w-4 opacity-70">
-                        <path
-                            fill-rule="evenodd"
-                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
                     </svg>
                 </label>
 
@@ -115,14 +112,20 @@
 
     <!-- CARD SECTION-->
 
+                <?php
+                    include 'koneksi.php';
+                    $query = mysqli_query($conn, 'SELECT * FROM produk');
+                    while ($produk = mysqli_fetch_array($query)){
+                ?>
+
         <div class="mx-2 my-auto py-20 gap-1 flex flex-wrap ">
             <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
                 <figure>
                     <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <h2 class="card-title"> <?=$produk['nama']?></h2>
+                    <p> <?=$produk['deskripsi']?></p>
                     <div class="card-actions justify-end">
                         <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
                     </div>
@@ -133,39 +136,17 @@
                     <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
                 </figure>
                 <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
+                    <h2 class="card-title"> <?=$produk['nama']?></h2>
+                    <p> <?=$produk['deskripsi']?></p>
                     <div class="card-actions justify-end">
                         <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
                     </div>
                 </div>
             </div>
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-60 shadow-xl mx-auto hover:scale-105 ">
-                <figure>
-                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Nike 102</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, blanditiis?</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn bg-teal-400 text-white hover:bg-teal-600">Buy Now</button>
-                    </div>
-                </div>
-            </div>
+            
             <!-- Add other card items similarly... -->
         </div>
+        <?php } ?>
         <!-- CARD END -->
 
     <!-- HERO SECTION -->
