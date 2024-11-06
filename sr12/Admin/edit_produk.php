@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (!isset($_SESSION)) {
+    header("location:../login.php");
+}
+if ($_SESSION['role'] != 'admin') {
+    header("location:../login.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

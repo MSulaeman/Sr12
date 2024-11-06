@@ -1,14 +1,14 @@
 <?php
     session_start();
-    // //kalau dia tidak login
-    // if(!isset($_SESSION)){
-    //     header('location: login.php');
-    // }
 
-    // if($_SESSION['role'] != "admin"){
-    //     echo "anda tidak memiliki akses";
-    //     die();
-    // }
+        if(!isset($_SESSION)){
+            header("location:../login.php");
+        }
+        if($_SESSION['role'] != 'admin'){
+            header("location:../login.php");
+        }
+
+
 
 ?>
 
@@ -65,7 +65,7 @@
                     <td class="p-3"><?=$produk['harga']?></td>
                     <td >
                         <a href="edit_produk.php?id=<?= $produk['id']?>" class="p-3"><button class="btn-xs btn btn-outline btn-warning">Update</button></a>
-                        <a href="hapus.php?nama=<?= $produk['nama']?>" class="p-3"><button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
+                        <a href="hapus.php?id=<?= $produk['id']?>" class="p-3"><button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
                     </td>
                 </tr>
                 <?php } ?>

@@ -8,7 +8,7 @@ if (isset($_POST['login'])) {
     // mendapatkan data
     $username = $_POST['username'];
     $password = $_POST['password'];
-    
+
 
     // Ambil data user berdasarkan username
     $query = mysqli_query($conn, "SELECT * FROM user where username='$username'");
@@ -19,15 +19,15 @@ if (isset($_POST['login'])) {
     if ($jumlah_data > 0) {
         $data = mysqli_fetch_array($query);
 
-        if (password_verify($password,$data['password'])) {
+        if (password_verify($password, $data['password'])) {
             // Simpan informasi ke session
             $_SESSION['id'] = $data['id'];
             $_SESSION['username'] = $data['username'];
             $_SESSION['role'] = $data['role']; // Menyimpan role pengguna
 
-            if ($data['role'] === 'admin') {//verifikasi admin atau user
+            if ($data['role'] === 'admin') { //verifikasi admin atau user
                 header('Location: Admin/admin.php');
-            }else{
+            } else {
                 header('Location: home.php');
             }
         } else {
@@ -48,16 +48,31 @@ if (isset($_POST['login'])) {
 
 
 <html>
+
 <head>
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <?php
-    if (isset($_GET['eror'])){
-        echo $_GET['eror'];
-    }
-?>
+if (isset($_GET['eror'])) { ?>
+    
+    <div role="alert" class="alert alert-error">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span><?php echo $_GET['eror']?>;</span>
+    </div>
+<?php } ?>
+
 <body class="bg-gray-100 ">
     <!-- NAVBAR -->
     <!-- <nav class="navbar bg-base-100  bg-transparent shadow-md">
