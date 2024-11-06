@@ -1,7 +1,8 @@
 <?php
 session_start();
 include 'koneksi.php';
-$query = mysqli_query($conn, "SELECT * FROM produk");
+$id    = $_GET['id'];
+$query = mysqli_query($conn, "SELECT * FROM produk where id=$id");
 
 ?>
 
@@ -18,7 +19,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
 
 <body>
 
-    <div class="">
+    <div class="container mx-auto my-14 flex gap-10">
         <?php
         $produk = mysqli_fetch_array($query)
         ?>
@@ -26,13 +27,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                 <figure>
                     <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="">
                 </figure>
-                <div class="card-body">
-                    <h2 class="card-title"> <?php echo $produk['nama'] ?></h2>
-                    <p> <?php echo $produk['deskripsi'] ?></p>
-                    
-                </div>
             </div>
-        
     </div>
 
 

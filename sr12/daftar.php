@@ -1,40 +1,31 @@
 <?php
 session_start();
-// mengecek apakah ada data login
-if (isset($_POST['login'])) {
+
+if (isset($_POST['daftar'])) {
 
     include('koneksi.php');
 
     // mendapatkan data
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $hash     = password_hash($password, PASSWORD_DEFAULT);
 
-
-    // Ambil data user berdasarkan username
     $query = mysqli_query($conn, "SELECT * FROM user where username='$username'");
-
-    // verifikasi data
     $jumlah_data = mysqli_num_rows($query);
 
     if ($jumlah_data > 0) {
         $data = mysqli_fetch_array($query);
-
-        if (password_verify($password, $data['password'])) {
-            // Simpan informasi ke session
-            $_SESSION['id'] = $data['id'];
-            $_SESSION['username'] = $data['username'];
-            $_SESSION['role'] = $data['role']; // Menyimpan role pengguna
-
-            if ($data['role'] === 'admin') { //verifikasi admin atau user
-                header('Location: Admin/admin.php');
-            } else {
-                header('Location: home.php');
-            }
-        } else {
-            header('Location: login.php?eror=username atau password salah');
-        }
+        header('Location: daftar.php?eror=username atau password sudah ada');
     } else {
-        header('Location: login.php?eror=username atau password salah');
+        $sql = "INSERT INTO user (username,password) VALUES ('$username','$hash')";
+        $query = mysqli_query($conn, $sql);
+
+        if ($query) {
+            header("location:login.php");
+            exit();
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
     }
 }
 ?>
@@ -50,9 +41,10 @@ if (isset($_POST['login'])) {
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Daftar</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
+
 
 
 
@@ -69,7 +61,7 @@ if (isset($_POST['login'])) {
         <div class="relative mt-28 mx-auto">
             <div class="absolute inset-0 bg-teal-400 rounded-lg transform rotate-6"></div>
             <div class="relative bg-white rounded-lg shadow-lg p-8 w-80">
-                <h2 class="text-2xl font-bold mb-6">Login</h2>
+                <h2 class="text-2xl font-bold mb-6">Daftar Akun</h2>
                 <?php
                 if (isset($_GET['eror'])) { ?>
                     <div role="alert" class="alert alert-error">
@@ -87,7 +79,7 @@ if (isset($_POST['login'])) {
                         <span><?php echo $_GET['eror'] ?></span>
                     </div>
                 <?php } ?>
-                <form method="POST" action="login.php">
+                <form method="POST" action="daftar.php">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="username" placeholder="Username" required>
@@ -97,15 +89,11 @@ if (isset($_POST['login'])) {
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" name="password" placeholder="Password" required>
                     </div>
                     <div class="flex items-center justify-center">
-                        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" name="login" value="login" type="submit">
-                            Login
+                        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" name="daftar" value="daftar" type="submit">
+                            Daftar
                         </button>
                     </div>
-                    <div>
-                        <a class="flex items-center justify-center font-serif text-cyan-500" href="daftar.php">Don't have account?Sign Up</a>
-                    </div>
                 </form>
-
             </div>
         </div>
     </div>

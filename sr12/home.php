@@ -124,14 +124,14 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
 
 
     
-        <div class=" my-auto py-10 flex gap-1 ">
+        <div class="container mx-auto my-14 flex  gap-10 ">
             <?php
                 while ($produk = mysqli_fetch_array($query)) {
             ?>
                 <a href="detailp.php?id=<?= $produk['id']?>">
-                    <div class="card card-compact bg-base-100 w-60 shadow-xl hover:scale-105 ">
+                    <div class="card card-compact bg-base-100 w-60 shadow-2xl hover:scale-105 ">
                         <figure>
-                            <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="">
+                            <img src="foto_produk/<?php echo $produk['foto'] ?>">
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title"> <?php echo $produk['nama'] ?></h2>
