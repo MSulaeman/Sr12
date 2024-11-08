@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
 </head>
 
-<body>
+<body class="scroll-smooth ">
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent shadow-md">
+    <nav class="navbar bg-base-100  bg-white shadow-md">
         <a href="home.php">
         <span class="material-symbols-outlined">
             arrow_back
         </span>
         </a>
-        <div class="flex-1 text-teal-400 bg-red italic font-mono font-bold">
+        <div class="flex-1 text-slate-800 bg-red italic font-mono font-bold">
             <p class="text-4xl mx-auto">SR12<span class="text-lg">Lite</span></p>
         </div>
         <div class="flex-none">
@@ -35,6 +35,9 @@
             </div>
             <ul tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 p-2 shadow">
+                <li>
+                        <a href="profile.php" class="justify-between">Profile</a>
+                    </li>
                 <li><a href="login.php">Logout</a></li>
             </ul>
         </div>

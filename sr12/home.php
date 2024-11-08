@@ -19,9 +19,9 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body class="scroll-smooth">
+<body class="scroll-smooth ">
     <!-- NAVBAR -->
-    <nav class="navbar h-4 bg-teal-500 shadow-md">
+    <nav class="navbar h-4 bg-white ">
         <div class="navbar-start">
             <!-- Dropdown for mobile -->
             <div class="dropdown">
@@ -46,12 +46,12 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
             </div>
             <!-- Logo -->
 
-            <div class="text-4xl text-white font-mono italic">SR12<span class="text-lg">Lite</span></div>
+            <div class="text-4xl ml-7 font-mono italic">SR12<span class="text-lg">Lite</span></div>
         </div>
 
-        <div class="navbar-center hidden lg:flex z-10   ">
+        <div class="navbar-center hidden lg:flex z-10 text-black">
             <!-- Menu for desktop -->
-            <ul class="menu menu-horizontal px-1 text-white text-base">
+            <ul class="menu menu-horizontal px-1 ">
                 <li><a href="home.php">Home</a></li>
                 <li>
                     <details>
@@ -135,7 +135,8 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title"> <?php echo $produk['nama'] ?></h2>
-                            <p> <?php echo $produk['deskripsi'] ?></p>
+                            <p>RP.<?php echo $produk['harga'] ?></p>
+                            <p><?php echo $produk['deskripsi'] ?></p>
                             <div class="card-actions justify-end">
                                 <button class="btn bg-teal-400 text-white hover:bg-teal-600">Beli Sekarang</button>
                             </div>
