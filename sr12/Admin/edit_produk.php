@@ -29,13 +29,13 @@ if ($_SESSION['role'] != 'admin') {
 
                     <?php
                     include '../koneksi.php';
-                    $id    = $_GET['id'];
-                    $query = mysqli_query($conn, "SELECT * FROM produk WHERE id='$id'");
+                    $id    = $_GET['id_produk'];
+                    $query = mysqli_query($conn, "SELECT * FROM produk WHERE id_produk='$id'");
                     $produk = mysqli_fetch_array($query);
                     ?>
 
                     <h2 class="text-2xl font-bold mb-6">Update Data</h2>
-                    <input type="hidden" name="id" value="<?= htmlspecialchars($produk['id']) ?>">
+                    <input type="hidden" name="id" value="<?= htmlspecialchars($produk['id_produk']) ?>">
 
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Nama Produk</label>

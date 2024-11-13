@@ -59,13 +59,15 @@
                 ?>
 
                 <tr>
-                    <td class="p-3"><?=$produk['id']?></td>
+                    <td class="p-3"><?=$produk['id_produk']?></td>
                     <td class="p-3"><?=$produk['nama']?></td>
                     <td class="p-3"><?=$produk['qty']?></td>
                     <td class="p-3"><?=$produk['harga']?></td>
                     <td >
-                        <a href="edit_produk.php?id=<?= $produk['id']?>" class="p-3"><button class="btn-xs btn btn-outline btn-warning">Update</button></a>
-                        <a href="hapus.php?id=<?= $produk['id']?>" class="p-3"><button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
+                        <a href="edit_produk.php?id_produk=<?= $produk['id_produk']?>" class="p-3">
+                        <button class="btn-xs btn btn-outline btn-warning">Update</button></a>
+                        <a href="hapus.php?id_produk=<?= $produk['id_produk']?>" class="p-3">
+                        <button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
                     </td>
                 </tr>
                 <?php } ?>

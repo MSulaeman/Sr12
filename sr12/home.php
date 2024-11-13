@@ -128,7 +128,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
             <?php
                 while ($produk = mysqli_fetch_array($query)) {
             ?>
-                <a href="detailp.php?id=<?= $produk['id']?>">
+                <a href="detailp.php?id_produk=<?= $produk['id_produk']?>">
                     <div class="card card-compact bg-base-200 transition-all duration-75 w-60 shadow-2xl hover:scale-105 ">
                         <figure>
                             <img src="foto_produk/<?php echo $produk['foto'] ?>">

@@ -1,15 +1,22 @@
 <?php
 session_start();
 include 'koneksi.php';
-$id    = $_GET['id'];
-$query = mysqli_query($conn, "SELECT * FROM produk where id=$id");
 
-?>
+if(!isset($_GET['id_produk'])){
+    header("Location:home.php");
+}
 
+$id    = $_GET['id_produk'];
+$query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
 
-<?php
-$produk = mysqli_fetch_array($query)
-?>
+    $dataproduk = mysqli_num_rows($query);
+
+        if($dataproduk == 0){ 
+            echo "<h1>Data Tidak Ditemukan</h1>";
+            die();
+        }
+        $produk = mysqli_fetch_array($query)
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
