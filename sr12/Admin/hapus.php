@@ -2,7 +2,7 @@
 include "../koneksi.php";
 $id = $_GET['id_produk'];
 
-$queryData = mysqli_query($conn, "SELECT foto FROM produk where id='$id'");
+$queryData = mysqli_query($conn, "SELECT foto FROM produk where id_produk='$id'");
 $data = mysqli_fetch_array($queryData);
 $fotoLama = $data['foto'];
 
