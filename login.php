@@ -96,13 +96,13 @@ if (isset($_POST['login'])) {
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
                         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" name="password" placeholder="Password" required>
                     </div>
-                    <div class="flex items-center justify-center">
-                        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" name="login" value="login" type="submit">
+                    <div class="items-center justify-center">
+                        <button class="bg-teal-500 w-64 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" name="login" value="login" type="submit">
                             Login
                         </button>
                     </div>
-                    <div>
-                        <a class="flex items-center justify-center font-serif text-cyan-500" href="daftar.php">Don't have account?Sign Up</a>
+                    <div class="mt-2">
+                        <a class="items-center justify-center font-serif text-cyan-400 " href="daftar.php">Don't have account?Sign Up</a>
                     </div>
                 </form>
 
