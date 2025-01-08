@@ -33,7 +33,7 @@
     <!-- NAVBAR -->
     <nav class="navbar bg-base-100  bg-transparent shadow-md">
         <div class="flex-1 ">
-            <p class="text-4xl text-teal-400  italic font-bold mx-auto">Halaman Admin</p>
+            <p class="text-4xl text-gray-800 italic font-bold mx-auto">Halaman Admin</p>
         </div>
         </div>
         <a href="../home.php"><button class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded">Home</button></a>
@@ -76,7 +76,7 @@
     </div>
 
 
-    <button class="bg-teal-400 btn-sm text-white rounded-lg text-base hover:bg-teal-600"><a href="tambah_produk.php">Tambah Produk</a></button>
+    <button class="bg-teal-500 btn-sm text-white rounded-lg text-base hover:bg-teal-600"><a href="tambah_produk.php">Tambah Produk</a></button>
 
 
     <script src="https://cdn.tailwindcss.com"></script>

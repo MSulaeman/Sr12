@@ -21,7 +21,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
 
 <body class="scroll-smooth ">
     <!-- NAVBAR -->
-    <nav class="navbar h-4 bg-white ">
+    <nav class="navbar h-4 bg-white shadow-md">
         <div class="navbar-start">
             <!-- Dropdown for mobile -->
             <div class="dropdown">
@@ -37,8 +37,8 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                     <li>
                         <a>Kategori</a>
                         <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                            <li><a>Masker Wajah</a></li>
+                            <li><a>Masker Rambut</a></li>
                         </ul>
                     </li>
                     <li><a>About</a></li>
@@ -46,7 +46,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
             </div>
             <!-- Logo -->
 
-            <div class="text-4xl ml-7 font-mono italic">SR12<span class="text-lg">Lite</span></div>
+            <div class="text-4xl ml-7 font-mono font-bold italic">SR12<span class="text-lg">Lite</span></div>
         </div>
 
         <div class="navbar-center hidden lg:flex z-10 text-black">
@@ -57,8 +57,8 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                     <details>
                         <summary>Kategori</summary>
                         <ul class="p-2 text-black">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+                            <li><a>Masker Wajah</a></li>
+                            <li><a>Masker Rambut</a></li>
                         </ul>
                     </details>
                 </li>
@@ -94,7 +94,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                         <span class="text-lg font-bold">0 Items</span>
                         <span class="text-info">Subtotal: $0</span>
                         <div class="">
-                            <a href="keranjang.php" class="btn bg-teal-400 text-white hover:bg-teal-600">
+                            <a href="keranjang.php" class="btn bg-teal-500 text-white hover:bg-teal-600">
                                 <button type="submit">View Cart</button>
                             </a>
                         </div>
@@ -121,9 +121,6 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
     <!-- NAVBAR END -->
 
     <!-- CARD SECTION-->
-
-
-    
         <div class="container mx-auto my-14 flex gap-10 ">
             <?php
                 while ($produk = mysqli_fetch_array($query)) {
@@ -138,7 +135,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                             <p>RP.<?php echo $produk['harga'] ?></p>
                             <p><?php echo $produk['deskripsi'] ?></p>
                             <div class="card-actions justify-end">
-                                <button class="btn bg-teal-400  text-white hover:bg-teal-600">Beli Sekarang</button>
+                                <button class="btn bg-teal-500  text-white hover:bg-teal-600">Beli Sekarang</button>
                             </div>
                         </div>
                     </div>

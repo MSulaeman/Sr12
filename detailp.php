@@ -17,6 +17,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
         }
         $produk = mysqli_fetch_array($query)
     ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
 
 <body class="">
 
-    <nav class="flex bg-base-100  bg-white mt-2">
+    <nav class="flex bg-base-100  bg-white mt-2 shadow-md">
         <a href="home.php" class="my-auto ml-7">
             <span class="material-symbols-outlined">
                 arrow_back
@@ -102,19 +103,26 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
             <div class="flex justify-center items-center">
                 <div class="pro-detail  w-full max-lg:max-w-[608px] lg:pl-8 xl:pl-16 max-lg:mx-auto max-lg:mt-8">
                     <h2 class="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2"><?php echo $produk['nama'] ?></h2>
-                    <p class="font-normal text-base text-gray-500"><?php echo $produk['deskripsi'] ?></p>
+                    <p class="font-normal text-base text-black"><?php echo $produk['deskripsi'] ?></p>
                     <div class="flex items-center">
                         <h5 class="font-manrope font-semibold text-2xl leading-9 text-gray-900">RP.<?php echo $produk['harga'] ?></h5>
                         <span class="ml-3 font-semibold text-lg text-black">30% off</span>
                     </div>
-                    <div class="flex items-center gap-3 mt-4">
-                        <button class="text-center w-full px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-75 hover:bg-white hover:text-black">Add to Cart</button>
-                        <button class="text-center w-full px-5 py-4 rounded-[100px] bg-teal-400 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-75 hover:bg-teal-600">Buy Now</button>
-                    </div>
+                        <form action="proses_keranjang.php" method="post" class="flex items-center gap-3 mt-4">
+                            <input type="hidden" name="id_produk" value="<?php echo $produk['id_produk'] ?>">
+                            <button class="text-center w-full px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
+                                        text-white shadow-sm transition-all duration-75 hover:bg-white hover:text-black" type="submit" >keranjang</button>
+                            <button class="text-center w-full px-5 py-4 rounded-[100px] 
+                                        bg-teal-400 flex items-center justify-center font-semibold text-lg 
+                                        text-white shadow-sm transition-all duration-75 hover:bg-teal-600">Beli Sekarang</button>
+                        </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+    
 
 
     <script src="https://cdn.tailwindcss.com"></script>
