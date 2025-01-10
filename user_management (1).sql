@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Nov 2024 pada 04.09
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Waktu pembuatan: 10 Jan 2025 pada 08.31
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `cart_item`
+--
+
+CREATE TABLE `cart_item` (
+  `id` int(11) NOT NULL,
+  `id_cart` int(11) NOT NULL,
+  `produk_id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `datail_penjualan`
 --
 
@@ -31,7 +57,7 @@ CREATE TABLE `datail_penjualan` (
   `id_penjualan` int(11) NOT NULL,
   `id_produk` int(11) NOT NULL,
   `subtotal` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -40,8 +66,17 @@ CREATE TABLE `datail_penjualan` (
 --
 
 CREATE TABLE `kategori` (
-  `id_kategori` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id_kategori` int(100) NOT NULL,
+  `kategori` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `kategori`) VALUES
+(1, 'Masker wajah'),
+(2, 'Masker rambut');
 
 -- --------------------------------------------------------
 
@@ -54,7 +89,7 @@ CREATE TABLE `penjualan` (
   `id_user` int(11) NOT NULL,
   `alamat` text NOT NULL,
   `status` enum('pending','proses','selesai','dibatalkan') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -70,7 +105,14 @@ CREATE TABLE `produk` (
   `qty` int(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `foto` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_kategori`, `harga`, `nama`, `qty`, `deskripsi`, `foto`) VALUES
+(16, 1, '7.749.000', 'iPhone 12', 9, '', 'iphone_12_purple_1_3.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,7 +125,7 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('customer','admin') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `user`
@@ -96,6 +138,21 @@ INSERT INTO `user` (`id`, `username`, `password`, `role`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indeks untuk tabel `cart_item`
+--
+ALTER TABLE `cart_item`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_cart` (`id_cart`),
+  ADD KEY `produk_id` (`produk_id`);
 
 --
 -- Indeks untuk tabel `datail_penjualan`
@@ -135,6 +192,18 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT untuk tabel `cart_item`
+--
+ALTER TABLE `cart_item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
@@ -150,7 +219,7 @@ ALTER TABLE `penjualan`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_produk` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
@@ -161,6 +230,19 @@ ALTER TABLE `user`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Ketidakleluasaan untuk tabel `cart_item`
+--
+ALTER TABLE `cart_item`
+  ADD CONSTRAINT `cart_item_ibfk_1` FOREIGN KEY (`id_cart`) REFERENCES `cart` (`id`),
+  ADD CONSTRAINT `cart_item_ibfk_2` FOREIGN KEY (`produk_id`) REFERENCES `produk` (`id_produk`);
 
 --
 -- Ketidakleluasaan untuk tabel `datail_penjualan`
