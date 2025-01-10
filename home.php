@@ -54,8 +54,8 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
             <ul class="menu menu-horizontal px-1 ">
                 <li><a href="home.php">Home</a></li>
                 <li>
-                    <details>
-                        <summary>Kategori</summary>
+                    <details class="dropdown">
+                        <summary class="">Kategori</summary>
                         <ul class="p-2 text-black">
                             <li><a>Masker Wajah</a></li>
                             <li><a>Masker Rambut</a></li>
@@ -128,11 +128,11 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                 <a href="detailp.php?id_produk=<?= $produk['id_produk']?>">
                     <div class="card card-compact bg-base-200 transition-all duration-75 w-60 shadow-2xl hover:scale-105 ">
                         <figure>
-                            <img src="foto_produk/<?php echo $produk['foto'] ?>">
+                            <img src="foto_produk/<?php echo $produk['foto'] ?>" class="w-28">
                         </figure>
                         <div class="card-body">
-                            <h2 class="card-title"> <?php echo $produk['nama'] ?></h2>
-                            <p>RP.<?php echo $produk['harga'] ?></p>
+                            <h2 class="card-title"><?php echo $produk['nama'] ?></h2>
+                            <p>RP,<?php echo $produk['harga'] ?></p>
                             <p><?php echo $produk['deskripsi'] ?></p>
                             <div class="card-actions justify-end">
                                 <button class="btn bg-teal-500  text-white hover:bg-teal-600">Beli Sekarang</button>

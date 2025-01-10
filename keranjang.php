@@ -1,17 +1,7 @@
+<?php
+include 'koneksi.php';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +81,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="font-bold">Hart Hagerty</div>
+                                <div class="font-bold">John Doe</div>
                                 <div class="text-sm opacity-50">United States</div>
                             </div>
                         </div>

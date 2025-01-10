@@ -88,13 +88,13 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
         
 
     
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-2 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1  lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="slider-box w-full h-full  max-lg:mx-auto mx-0">
                 <div class="swiper main-slide-carousel swiper-container relative mb-6">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide ">
-                            <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="Product Image" class="max-lg:mx-auto rounded-2xl object-cover">
+                            <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="Product Image" class="w-8/12  max-lg:mx-auto rounded-2xl object-cover">
                         </div>
                         <!-- Tambahkan lebih banyak gambar di sini -->
                     </div>

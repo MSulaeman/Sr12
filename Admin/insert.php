@@ -7,6 +7,9 @@
     $qty = $_POST['qty'];
     $deskripsi = $_POST['deskripsi'];
 
+    // echo $id_kategori;
+    // die();
+
     $foto = $_FILES['foto']['name'];
     $lokasi_tmp = $_FILES['foto']['tmp_name'];
 

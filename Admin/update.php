@@ -1,13 +1,16 @@
 <?php
 include '../koneksi.php';
 
-$id   = $_POST['id_produk'];
+$id   = $_POST['id'];
 $nama = $_POST['nama'];
 $harga = $_POST['harga'];
 $qty = $_POST['qty'];
 $deskripsi = $_POST['deskripsi'];
 $foto = $_FILES['foto']['name'];
 $lokasi_foto = $_FILES['foto']['tmp_name'];
+
+// var_dump($_POST);
+// die();
 
 // ambil data foto lama
 $queryData = mysqli_query($conn, "SELECT foto FROM produk where id_produk='$id'");

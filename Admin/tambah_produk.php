@@ -7,6 +7,9 @@ if(!isset($_SESSION)){
 if($_SESSION['role'] != 'admin'){
     header("location:../login.php");
 }
+include '../koneksi.php';
+    $query = mysqli_query($conn, "SELECT * FROM kategori"); 
+
 
 ?>
 
@@ -15,7 +18,7 @@ if($_SESSION['role'] != 'admin'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <title>Tambah</title>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -24,7 +27,6 @@ if($_SESSION['role'] != 'admin'){
         <form action="insert.php" method="post" enctype="multipart/form-data">
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
-                <input type="hidden" name="id_kategori" placeholder="ID Kategori" required>
                 <input type="text" id="name" name="nama" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring ">
             </div>
             <div class="mb-4">
@@ -34,6 +36,17 @@ if($_SESSION['role'] != 'admin'){
             <div class="mb-4">
                 <label for="message" class="block text-sm font-medium text-gray-700">Qty</label>
                 <input type="number" id="message" name="qty" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring "></input>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Kategori</label>
+                <select name="id_kategori" id="cars" class="text-sm">
+                    Pilih
+                    <?php
+                    while ($row = mysqli_fetch_array($query)){?>
+                        <option value="<?=$row['id_kategori']?>"><?=$row['kategori']?></option>
+                    <?php } ?>
+                    
+                </select>
             </div>
             <div class="mb-4">
                 <label for="message" class="block text-sm font-medium text-gray-700">Deskripsi</label>
