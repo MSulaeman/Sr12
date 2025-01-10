@@ -54,7 +54,7 @@
 
                 <?php
                     include '../koneksi.php';
-                    $query = mysqli_query($conn, 'SELECT * FROM produk');
+                    $query = mysqli_query($conn, 'SELECT produk.*,kategori.* FROM produk INNER JOIN kategori ON produk.id_kategori = kategori.id_kategori;');
                     while ($produk = mysqli_fetch_array($query)){
                 ?>
 
