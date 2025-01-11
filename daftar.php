@@ -10,7 +10,7 @@ if (isset($_POST['daftar'])) {
     $password = $_POST['password'];
     $hash     = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = mysqli_query($conn, "SELECT * FROM user where username='$username'");
+    $query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username'");
     $jumlah_data = mysqli_num_rows($query);
 
     if ($jumlah_data > 0) {

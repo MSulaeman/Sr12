@@ -132,7 +132,7 @@ $query = mysqli_query($conn, "SELECT * FROM produk");
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title"><?php echo $produk['nama'] ?></h2>
-                            <p>RP,<?php echo $produk['harga'] ?></p>
+                            <p>Rp,<?php echo $produk['harga'] ?></p>
                             <p><?php echo $produk['deskripsi'] ?></p>
                             <div class="card-actions justify-end">
                                 <button class="btn bg-teal-500  text-white hover:bg-teal-600">Beli Sekarang</button>
