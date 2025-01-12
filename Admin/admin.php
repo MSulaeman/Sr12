@@ -1,12 +1,12 @@
 <?php
-    session_start();
+session_start();
 
-        if(!isset($_SESSION)){
-            header("location:../login.php");
-        }
-        if($_SESSION['role'] != 'admin'){
-            header("location:../login.php");
-        }
+if (!isset($_SESSION)) {
+    header("location:../login.php");
+}
+if ($_SESSION['role'] != 'admin') {
+    header("location:../login.php");
+}
 
 
 
@@ -22,16 +22,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Halaman Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Link icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- end link icon -->
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar bg-base-100  bg-transparent shadow-md">
+    <nav class="navbar bg-base-100 shadow-md">
         <div class="flex-1 ">
             <p class="text-4xl text-gray-800 italic font-bold mx-auto">Halaman Admin</p>
         </div>
@@ -43,33 +47,37 @@
 
     <div class="flex mt-6">
         <div class="w-auto border-2 border-teal-400 mx-auto rounded-lg">
-            <table class="mx-auto">
-                <tr class="bg-slate-300">
-                    <th class="p-3">No</th>
-                    <th class="p-3">Nama</th>
-                    <th class="p-3">Qty</th>
-                    <th class="p-3">Harga</th>
-                    <th class="p-3">Setting</th>
-                </tr>
+            <table class="mx-auto min-w-full divide-y-2 divide-gray-200 bg-white text-md">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">No</th>
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Nama</th>
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Qty</th>
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Harga</th>
+                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Setting</th>
+                    </tr>
+                </thead>
 
                 <?php
-                    include '../koneksi.php';
-                    $query = mysqli_query($conn, 'SELECT produk.*,kategori.* FROM produk INNER JOIN kategori ON produk.id_kategori = kategori.id_kategori;');
-                    while ($produk = mysqli_fetch_array($query)){
+                include '../koneksi.php';
+                $query = mysqli_query($conn, 'SELECT produk.*,kategori.* FROM produk INNER JOIN kategori ON produk.id_kategori = kategori.id_kategori;');
+                while ($produk = mysqli_fetch_array($query)) {
                 ?>
 
-                <tr>
-                    <td class="p-3"><?=$produk['id_produk']?></td>
-                    <td class="p-3"><?=$produk['nama']?></td>
-                    <td class="p-3"><?=$produk['qty']?></td>
-                    <td class="p-3"><?=$produk['harga']?></td>
-                    <td >
-                        <a href="edit_produk.php?id_produk=<?= $produk['id_produk']?>" class="p-3">
-                        <button class="btn-xs btn btn-outline btn-warning">Update</button></a>
-                        <a href="hapus.php?id_produk=<?= $produk['id_produk']?>" class="p-3">
-                        <button class="btn-xs btn btn-outline btn-error">Hapus</button></a>
-                    </td>
-                </tr>
+                    <tr class="odd:bg-gray-100">
+                        <td class="p-3"><?= $produk['id_produk'] ?></td>
+                        <td class="p-3"><?= $produk['nama'] ?></td>
+                        <td class="p-3"><?= $produk['qty'] ?></td>
+                        <td class="p-3"><?= $produk['harga'] ?></td>
+                        <td>
+                            <a href="edit_produk.php?id_produk=<?= $produk['id_produk'] ?>" class="p-3">
+
+                            </a>
+                            <a href="hapus.php?id_produk=<?= $produk['id_produk'] ?>" class="p-3">
+                                
+                            </a>
+                        </td>
+                    </tr>
                 <?php } ?>
             </table>
         </div>

@@ -88,33 +88,32 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
         
 
     
-    <div class="mt-2 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1  lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="slider-box w-full h-full  max-lg:mx-auto mx-0">
                 <div class="swiper main-slide-carousel swiper-container relative mb-6">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide ">
-                            <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="Product Image" class="w-8/12  max-lg:mx-auto rounded-2xl object-cover">
+                            <img src="foto_produk/<?php echo $produk['foto'] ?>" alt="Product Image" class="mt-12 w-7/12 max-lg:mx-auto rounded-2xl object-cover">
                         </div>
-                        <!-- Tambahkan lebih banyak gambar di sini -->
                     </div>
                 </div>
             </div>
             <div class="flex justify-center items-center">
                 <div class="pro-detail  w-full max-lg:max-w-[608px] lg:pl-8 xl:pl-16 max-lg:mx-auto max-lg:mt-8">
-                    <h2 class="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2"><?php echo $produk['nama'] ?></h2>
-                    <p class="font-normal text-base text-black"><?php echo $produk['deskripsi'] ?></p>
-                    <div class="flex items-center">
-                        <h5 class="font-manrope font-semibold text-2xl leading-9 text-gray-900">RP.<?php echo $produk['harga'] ?></h5>
+                    <h2 class="font-manrope font-bold text-3xl leading-10 text-gray-900"><?php echo $produk['nama'] ?></h2>
+                    <div class="flex items-center mb-5">
+                        <h5 class="font-manrope font-semibold text-2xl leading-9 text-gray-900">RP<?php echo $produk['harga'] ?></h5>
                         <span class="ml-3 font-semibold text-lg text-black">30% off</span>
                     </div>
+                    <p class="font-normal text-base text-black mb-5"><?php echo $produk['deskripsi'] ?></p>
                         <form action="proses_keranjang.php" method="post" class="flex items-center gap-3 mt-4">
                             <input type="hidden" name="id_produk" value="<?php echo $produk['id_produk'] ?>">
                             <button class="text-center w-full px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
-                                        text-white shadow-sm transition-all duration-75 hover:bg-white hover:text-black" type="submit" >keranjang</button>
+                                        text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-black" type="submit" >keranjang</button>
                             <button class="text-center w-full px-5 py-4 rounded-[100px] 
                                         bg-teal-400 flex items-center justify-center font-semibold text-lg 
-                                        text-white shadow-sm transition-all duration-75 hover:bg-teal-600">Beli Sekarang</button>
+                                        text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-teal-400">Beli Sekarang</button>
                         </form>
                 </div>
             </div>

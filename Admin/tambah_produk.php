@@ -40,7 +40,6 @@ include '../koneksi.php';
             <div class="mb-4">
                 <label for="message" class="block text-sm font-medium text-gray-700">Kategori</label>
                 <select name="id_kategori" id="cars" class="text-sm">
-                    Pilih
                     <?php
                     while ($row = mysqli_fetch_array($query)){?>
                         <option value="<?=$row['id_kategori']?>"><?=$row['kategori']?></option>
