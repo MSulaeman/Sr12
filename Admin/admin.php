@@ -71,10 +71,10 @@ if ($_SESSION['role'] != 'admin') {
                         <td class="p-3"><?= $produk['harga'] ?></td>
                         <td>
                             <a href="edit_produk.php?id_produk=<?= $produk['id_produk'] ?>" class="p-3">
-
+                                <button class="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Update</button>
                             </a>
                             <a href="hapus.php?id_produk=<?= $produk['id_produk'] ?>" class="p-3">
-                                
+                                <button class="inline-block rounded bg-red-600 px-4 py-2 text-xs font-medium text-white hover:bg-red-700">Delete</button>
                             </a>
                         </td>
                     </tr>
@@ -84,7 +84,7 @@ if ($_SESSION['role'] != 'admin') {
     </div>
 
 
-    <button class="bg-teal-500 btn-sm text-white rounded-lg text-base hover:bg-teal-600"><a href="tambah_produk.php">Tambah Produk</a></button>
+    <button class="bg-gray-800 rounded text-white ml-5 px-4 py-2 text-sm font-medium hover:bg-white hover:text-black"><a href="tambah_produk.php">Tambah Produk</a></button>
 
 
     <script src="https://cdn.tailwindcss.com"></script>

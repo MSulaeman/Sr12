@@ -54,8 +54,6 @@ if (isset($_POST['login'])) {
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-
-
 <body class="bg-gray-100 ">
     <!-- NAVBAR -->
     <!-- <nav class="navbar bg-base-100  bg-transparent shadow-md">
@@ -71,22 +69,11 @@ if (isset($_POST['login'])) {
             <div class="relative bg-white rounded-lg shadow-lg p-8 w-80">
                 <h2 class="text-2xl font-bold mb-6">Login</h2>
                 <?php
-                if (isset($_GET['eror'])) { ?>
-                    <div role="alert" class="alert alert-error">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6 shrink-0 stroke-current"
-                            fill="none"
-                            viewBox="0 0 24 24">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span><?php echo $_GET['eror'] ?></span>
+                if (isset($_GET['eror'])) : ?>
+                    <div role="alert" class="rounded border-s-4 border-red-500 bg-red-50 p-4">
+                        <span class="block font-medium text-red-800"><?= $_GET['eror'] ?></span>
                     </div>
-                <?php } ?>
+                <?php endif ?>
                 <form method="POST" action="login.php">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
