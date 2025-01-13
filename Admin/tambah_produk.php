@@ -19,11 +19,11 @@ include '../koneksi.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <title>Tambah</title>
+    <title>Tambah data produk</title>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96">
-        <h2 class="text-2xl font-semibold mb-6 text-center">Tambah Data</h2>
+<body class="bg-gray-100 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Tambah Data Produk</h2>
         <form action="insert.php" method="post" enctype="multipart/form-data">
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
@@ -41,9 +41,9 @@ include '../koneksi.php';
                 <label for="message" class="block text-sm font-medium text-gray-700">Kategori</label>
                 <select name="id_kategori" id="cars" class="text-sm">
                     <?php
-                    while ($row = mysqli_fetch_array($query)){?>
+                    while ($row = mysqli_fetch_array($query)) : ?>
                         <option value="<?=$row['id_kategori']?>"><?=$row['kategori']?></option>
-                    <?php } ?>
+                    <?php endwhile ?>
                     
                 </select>
             </div>

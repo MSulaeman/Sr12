@@ -2,21 +2,21 @@
 session_start();
 include 'koneksi.php';
 
-if(!isset($_GET['id_produk'])){
+if (!isset($_GET['id_produk'])) {
     header("Location:home.php");
 }
 
 $id    = $_GET['id_produk'];
 $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
 
-    $dataproduk = mysqli_num_rows($query);
+$dataproduk = mysqli_num_rows($query);
 
-        if($dataproduk == 0){ 
-            echo "<h1>Data Tidak Ditemukan</h1>";
-            die();
-        }
-        $produk = mysqli_fetch_array($query)
-    ?>
+if ($dataproduk == 0) {
+    echo "<h1>Data Tidak Ditemukan</h1>";
+    die();
+}
+$produk = mysqli_fetch_array($query)
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,9 +85,9 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
         </div>
     </nav>
 
-        
 
-    
+
+
     <div class="mt-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1  lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="slider-box w-full h-full  max-lg:mx-auto mx-0">
@@ -107,21 +107,34 @@ $query = mysqli_query($conn, "SELECT * FROM produk where id_produk=$id");
                         <span class="ml-3 font-semibold text-lg text-black">30% off</span>
                     </div>
                     <p class="font-normal text-base text-black mb-5"><?php echo $produk['deskripsi'] ?></p>
-                        <form action="proses_keranjang.php" method="post" class="flex items-center gap-3 mt-4">
-                            <input type="hidden" name="id_produk" value="<?php echo $produk['id_produk'] ?>">
-                            <button class="text-center w-full px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
-                                        text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-black" type="submit" >keranjang</button>
-                            <button class="text-center w-full px-5 py-4 rounded-[100px] 
+                    <div class="mb-5 ">
+                        <label for="Quantity" class="sr-only"> Quantity </label>
+                        <div class="flex items-center gap-1">
+                            <button type="submit" class="size-10 leading-10 text-gray-600 transition hover:opacity-75">
+                                &minus;
+                            </button>
+                            <input type="number" value="1" name="qty"
+                                class="h-10 w-16 rounded border-gray-200 text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none" />
+                            <button type="submit" class="size-10 leading-10 text-gray-600 transition hover:opacity-75">
+                                &plus;
+                            </button>
+                        </div>
+                    </div>
+                    <form action="proses_keranjang.php" method="post" class="flex items-center gap-3 mt-4">
+                        <input type="hidden" name="id_produk" value="<?php echo $produk['id_produk'] ?>">
+                        <button class="text-center w- px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
+                                        text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-black" type="submit">keranjang</button>
+                        <button class="text-center w-full px-5 py-4 rounded-[100px] 
                                         bg-teal-400 flex items-center justify-center font-semibold text-lg 
                                         text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-teal-400">Beli Sekarang</button>
-                        </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
 
-    
+
 
 
     <script src="https://cdn.tailwindcss.com"></script>

@@ -60,7 +60,7 @@ include 'koneksi.php';
                     <th>Produk</th>
                     <th>Deskripsi</th>
                     <th>Harga</th>
-                    <th></th>
+                    <th>Setting</th>
                 </tr>
             </thead>
             <tbody>

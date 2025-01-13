@@ -29,7 +29,7 @@ if ($_SESSION['role'] != 'admin') {
     <title>Halaman Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- Link icon  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <!-- end link icon -->
 </head>
 
@@ -46,7 +46,7 @@ if ($_SESSION['role'] != 'admin') {
     <!-- NAVBAR END -->
 
     <div class="flex mt-6">
-        <div class="w-auto border-2 border-teal-400 mx-auto rounded-lg">
+        <div class="w-auto border-2 border-gray-900 mx-auto rounded-lg">
             <table class="mx-auto min-w-full divide-y-2 divide-gray-200 bg-white text-md">
                 <thead class="ltr:text-left rtl:text-right">
                     <tr>
@@ -84,7 +84,7 @@ if ($_SESSION['role'] != 'admin') {
     </div>
 
 
-    <button class="bg-gray-800 rounded text-white ml-5 px-4 py-2 text-sm font-medium hover:bg-white hover:text-black"><a href="tambah_produk.php">Tambah Produk</a></button>
+    <button class="absolute right-60 top-24 bg-gray-800 rounded text-white px-4 py-2 text-sm font-medium hover:bg-gray-900"><a href="tambah_produk.php">Tambah Produk</a></button>
 
 
     <script src="https://cdn.tailwindcss.com"></script>
