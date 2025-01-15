@@ -57,10 +57,9 @@ $query_p = mysqli_query($conn, "SELECT * FROM produk");
                         <summary class="">Kategori</summary>
                         <ul class="p-2 text-black">
                             <li><a class="p-2">
-                                    <?php
-                                    while ($row = mysqli_fetch_array($query_k)) { ?>
-                                        <option class="border border-gray-200 rounded-lg p-2" value="<?= $row['id_kategori'] ?>"><?= $row['kategori'] ?></option>
-                                    <?php } ?>
+                                
+                                        <option class="border border-gray-200 rounded-lg p-2"></option>
+                                    
                                 </a></li>
                         </ul>
                     </details>
@@ -134,7 +133,7 @@ $query_p = mysqli_query($conn, "SELECT * FROM produk");
                         <img src="foto_produk/<?php echo $produk['foto'] ?>" class="w-36 p-2">
                     </figure>
                     <div class="p-6">
-                        <h2 class="text-lg text-gray-500 font-bold"><?php echo $produk['nama'] ?></h2>
+                        <h2 class="text-lg text-gray-900 font-bold"><?php echo $produk['nama'] ?></h2>
                         <p class="font-medium">Rp<?php echo $produk['harga'] ?></p>
                         <p class="text-gray-500 mt-3 line-clamp-3"><?php echo $produk['deskripsi'] ?></p>
                         <div class=" justify-start mt-3">

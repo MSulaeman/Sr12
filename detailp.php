@@ -108,7 +108,7 @@ $produk = mysqli_fetch_array($query)
                     </div>
                     <p class="font-normal text-base text-black mb-5"><?php echo $produk['deskripsi'] ?></p>
                     <div class="mb-5 ">
-                        <label for="Quantity" class="sr-only"> Quantity </label>
+                        <label for="Quantity" class="sr-only">Quantity </label>
                         <div class="flex items-center gap-1">
                             <button type="submit" class="size-10 leading-10 text-gray-600 transition hover:opacity-75">
                                 &minus;
@@ -122,7 +122,7 @@ $produk = mysqli_fetch_array($query)
                     </div>
                     <form action="proses_keranjang.php" method="post" class="flex items-center gap-3 mt-4">
                         <input type="hidden" name="id_produk" value="<?php echo $produk['id_produk'] ?>">
-                        <button class="text-center w- px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
+                        <button class="text-center w-full px-5 py-4 rounded-[100px] bg-black flex items-center justify-center font-semibold text-lg
                                         text-white shadow-sm transition-all duration-200 hover:bg-white hover:text-black" type="submit">keranjang</button>
                         <button class="text-center w-full px-5 py-4 rounded-[100px] 
                                         bg-teal-400 flex items-center justify-center font-semibold text-lg 
