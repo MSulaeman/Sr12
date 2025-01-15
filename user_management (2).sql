@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Jan 2025 pada 08.31
+-- Waktu pembuatan: 15 Jan 2025 pada 04.34
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -33,6 +33,15 @@ CREATE TABLE `cart` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `created_at`) VALUES
+(8, 11, '2025-01-15 03:02:58'),
+(9, 11, '2025-01-15 03:05:10'),
+(10, 11, '2025-01-15 03:22:56');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +55,15 @@ CREATE TABLE `cart_item` (
   `qty` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `cart_item`
+--
+
+INSERT INTO `cart_item` (`id`, `id_cart`, `produk_id`, `qty`, `created_at`) VALUES
+(5, 8, 16, 1, '2025-01-15 03:02:59'),
+(6, 9, 16, 1, '2025-01-15 03:05:10'),
+(7, 10, 16, 1, '2025-01-15 03:22:56');
 
 -- --------------------------------------------------------
 
@@ -195,13 +213,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `cart_item`
 --
 ALTER TABLE `cart_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
